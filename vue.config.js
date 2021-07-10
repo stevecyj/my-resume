@@ -1,9 +1,9 @@
 module.exports = {
-  publicPath: '/my-resume/dist/',
+  publicPath: './',
   outputDir: undefined,
   assetsDir: undefined,
   runtimeCompiler: undefined,
   productionSourceMap: undefined,
   parallel: undefined,
-  css: undefined
-}
+  css: undefined,
+};

@@ -523,7 +523,6 @@
               </ul>
               <p><i class="fas fa-tools pr-3"></i>建立形象網站後台</p>
               <ul>
-                <li>整理Vue、Larave 常用功能，協助單位導入框架開發環境</li>
                 <li>將形象網站建立內容管理系統，以利上架文章、上傳檔案</li>
               </ul>
             </div>

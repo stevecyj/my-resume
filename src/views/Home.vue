@@ -323,7 +323,7 @@
               <div class="myCard">
                 <div class="myCard_img">
                   <a href="#" @click.prevent="openModal(works[1])"
-                    ><img class="img-fluid" src="../assets/works/canvas-game.png" alt="img"
+                    ><img class="img-fluid" src="../assets/works/shoot-game-1.png" alt="img"
                   /></a>
                 </div>
               </div>
@@ -617,7 +617,7 @@ export default {
         },
         {
           title: 'Canvas Shoot Game',
-          imgUrl: require('../assets/works/canvas-game-2.png'),
+          imgUrl: require('../assets/works/shoot-game-2.png'),
           href: 'https://metyc.github.io/',
           content: ['根據設計稿完成切版', '使用 Canvas 呈現動畫', '使用 JavaScript、TweenLite 開發功能'],
         },

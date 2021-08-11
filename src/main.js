@@ -1,15 +1,16 @@
-import Vue from 'vue'
-import VueScrollTo from 'vue-scrollto'
-import App from './App.vue'
-import router from './router'
-import store from './store'
-import 'bootstrap'
+import Vue from 'vue';
+import VueScrollTo from 'vue-scrollto';
+import VueMeta from 'vue-meta';
+import App from './App.vue';
+import router from './router';
+import store from './store';
+import 'bootstrap';
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 Vue.use(VueScrollTo, {
-  container: "body",
+  container: 'body',
   duration: 1000,
-  easing: "ease",
+  easing: 'ease',
   offset: 0,
   force: true,
   cancelable: true,
@@ -17,11 +18,12 @@ Vue.use(VueScrollTo, {
   onDone: false,
   onCancel: false,
   x: false,
-  y: true
-})
+  y: true,
+});
+Vue.use(VueMeta);
 
 new Vue({
   router,
   store,
-  render: h => h(App)
-}).$mount('#app')
+  render: h => h(App),
+}).$mount('#app');

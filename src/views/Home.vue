@@ -594,6 +594,20 @@ import $ from 'jquery';
 
 export default {
   name: 'home',
+  metaInfo: {
+    title: 'Resume of Steve',
+    // image: 'https://i.imgur.com/ZtxA1HW.jpg',
+    meta: [
+      {
+        property: 'og:image',
+        content: 'https://i.imgur.com/ZtxA1HW.jpg',
+      },
+      {
+        property: 'og:title',
+        content: 'Resume of Steve',
+      },
+    ],
+  },
   data() {
     return {
       viewprotH: 0,

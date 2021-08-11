@@ -557,7 +557,7 @@
               <div class="row d-flex justify-content-center">
                 <div class="col-md-6">
                   <div class="px-3">
-                    <img class="img-fluid img-thumbnail" src="https://fakeimg.pl/300x300/?text=Hello" alt="" />
+                    <img class="img-fluid img-thumbnail" src="https://i.imgur.com/zqTebNt.jpg" alt="" />
                   </div>
                 </div>
               </div>
@@ -971,7 +971,7 @@ body {
 .img-profile {
   height: 400px;
   width: 400px;
-  background-image: url('https://fakeimg.pl/400x400/?text=Hello');
+  background-image: url('https://i.imgur.com/qzV5e6j.jpg');
   background-size: cover;
   background-position: center center;
   border-radius: 50%;

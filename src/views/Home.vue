@@ -971,7 +971,7 @@ body {
 .img-profile {
   height: 400px;
   width: 400px;
-  background-image: url('https://i.imgur.com/qzV5e6j.jpg');
+  background-image: url('~@/assets/images/cover_coding.jpg');
   background-size: cover;
   background-position: center center;
   border-radius: 50%;

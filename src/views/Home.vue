@@ -1,28 +1,59 @@
 <template>
   <div>
-    <div v-if="navActive == 'works' || navActive == 'experience' || navActive == 'contact'" class="bg-img2"></div>
-    <div v-else class="bg-img1"></div>
+    <div
+      v-if="navActive == 'works' || navActive == 'experience' || navActive == 'contact'"
+      class="bg-img2"
+    ></div>
+    <div
+      v-else
+      class="bg-img1"
+    ></div>
     <!-- 這裡是 navbar  -->
-    <nav class="navbar navbar-expand-lg myNav" :class="{ 'scroll-color': viewprotH > 300 }">
-      <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03">
+    <nav
+      class="navbar navbar-expand-lg myNav"
+      :class="{ 'scroll-color': viewprotH > 300 }"
+    >
+      <button
+        class="navbar-toggler text-white"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo03"
+      >
         <span><i class="fas fa-list-ul"></i></span>
       </button>
-      <a class="navbar-brand" href="#"><i class="fas fa-feather-alt"></i> Steve Resume</a>
+      <a
+        class="navbar-brand"
+        href="#"
+      ><i class="fas fa-feather-alt"></i> Steve Resume</a>
 
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <div
+        class="collapse navbar-collapse"
+        id="navbarTogglerDemo03"
+      >
         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#about" v-scroll-to="'#about'" :class="{ active: navActive == 'about' }">About</a>
+            <a
+              class="nav-link"
+              href="#about"
+              v-scroll-to="'#about'"
+              :class="{ active: navActive == 'about' }"
+            >About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#skill" v-scroll-to="'#skill'" :class="{ active: navActive == 'skill' }"
-              >Skills</a
-            >
+            <a
+              class="nav-link"
+              href="#skill"
+              v-scroll-to="'#skill'"
+              :class="{ active: navActive == 'skill' }"
+            >Skills</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#works" v-scroll-to="'#works'" :class="{ active: navActive == 'works' }"
-              >Projects</a
-            >
+            <a
+              class="nav-link"
+              href="#works"
+              v-scroll-to="'#works'"
+              :class="{ active: navActive == 'works' }"
+            >Projects</a>
           </li>
           <li class="nav-item">
             <a
@@ -30,19 +61,24 @@
               href="#experience"
               v-scroll-to="'#experience'"
               :class="{ active: navActive == 'experience' }"
-              >Experience</a
-            >
+            >Experience</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact" v-scroll-to="'#contact'" :class="{ active: navActive == 'contact' }"
-              >Contact</a
-            >
+            <a
+              class="nav-link"
+              href="#contact"
+              v-scroll-to="'#contact'"
+              :class="{ active: navActive == 'contact' }"
+            >Contact</a>
           </li>
         </ul>
       </div>
     </nav>
     <!-- 這裡是 header  -->
-    <div class="h100 top-img text-white d-flex align-items-center" style="backgroundPosition:center center">
+    <div
+      class="h100 top-img text-white d-flex align-items-center"
+      style="backgroundPosition:center center"
+    >
       <div class="container">
         <div class="row">
           <div class="col-md-6  d-flex justify-content-center">
@@ -71,26 +107,37 @@
     <div id="about">
       <div class="container">
         <h1 class="myTitle-white">About Myself</h1>
-        <div class="row aboutHide" :class="{ active: aboutShow }">
+        <div
+          class="row aboutHide"
+          :class="{ active: aboutShow }"
+        >
           <div class="col-md-6">
-            <img src="https://fakeimg.pl/500x400/?text=Hello" alt="" class="img-fluid myShadow rounded my-3" />
+            <img
+              src="../assets/images/personal-1.jpg"
+              alt=""
+              class="img-fluid myShadow rounded my-3"
+            />
           </div>
           <div class="col-md-6 d-flex align-items-center">
             <div class="p-4 my-3 bgWhite">
               <p>Hello, my name is Cao Youjing (Steve)</p>
 
               <p>
-                Work hard to study various technologies and integrate them. In the process of continuous pursuit,
-                continuous learning, and continuous creation, Seeing others smile on my work, this sense of
+                Work hard to study various technologies and integrate them. In the process of
+                continuous pursuit,
+                continuous learning, and continuous creation, Seeing others smile on my work, this
+                sense of
                 accomplishment makes me feel that life is extremely rich.
               </p>
 
               <p>
-                In 2019, I started to set the front-end career direction for myself, and during this period began to
+                In 2019, I started to set the front-end career direction for myself, and during this
+                period began to
                 develop the skill tree.
               </p>
               <p>
-                2019 officially entered the front-end work, and also began to study the use of the Laravel framework,
+                2019 officially entered the front-end work, and also began to study the use of the
+                Laravel framework,
                 currently mainly involved in 3 large-scale projects as follows.
               </p>
               <p>1. Vue-based entertainment city system</p>
@@ -113,17 +160,32 @@
       <div class="container">
         <h1 class="myTitle-white">Skills</h1>
         <div class="d-flex justify-content-center pb-5">
-          <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
-            <button @click="skillDispaly = 'list'" type="button" class="btn btn-info">
+          <div
+            class="btn-group btn-group-lg"
+            role="group"
+            aria-label="Basic example"
+          >
+            <button
+              @click="skillDispaly = 'list'"
+              type="button"
+              class="btn btn-info"
+            >
               清單 <i class="far fa-list-alt fa-1x"></i>
             </button>
-            <button @click="skillDispaly = 'gallery'" type="button" class="btn btn-primary">
+            <button
+              @click="skillDispaly = 'gallery'"
+              type="button"
+              class="btn btn-primary"
+            >
               圖示 <i class="fas fa-grip-horizontal fa-1x"></i>
             </button>
           </div>
         </div>
 
-        <div class="row d-flex justify-content-center" v-if="skillDispaly == 'list'">
+        <div
+          class="row d-flex justify-content-center"
+          v-if="skillDispaly == 'list'"
+        >
           <div class="col-md-8 text-white skillList">
             <h3>前端(Front-end)</h3>
             <ul>
@@ -153,12 +215,19 @@
             </ul>
           </div>
         </div>
-        <div class="row" v-if="skillDispaly == 'gallery'">
+        <div
+          class="row"
+          v-if="skillDispaly == 'gallery'"
+        >
           <div class="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
             <div class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <img src="../assets/skill/html.png" alt="Avatar" style="width:150px;height:150px;" />
+                  <img
+                    src="../assets/skill/html.png"
+                    alt="Avatar"
+                    style="width:150px;height:150px;"
+                  />
                 </div>
                 <div class="flip-card-back">
                   <h2>HTML</h2>
@@ -172,7 +241,11 @@
             <div class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <img src="../assets/skill/css.png" alt="Avatar" style="width:150px;height:150px;" />
+                  <img
+                    src="../assets/skill/css.png"
+                    alt="Avatar"
+                    style="width:150px;height:150px;"
+                  />
                 </div>
                 <div class="flip-card-back">
                   <h2>CSS</h2>
@@ -186,7 +259,11 @@
             <div class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <img src="../assets/skill/javascript.png" alt="Avatar" style="width:150px;height:150px;" />
+                  <img
+                    src="../assets/skill/javascript.png"
+                    alt="Avatar"
+                    style="width:150px;height:150px;"
+                  />
                 </div>
                 <div class="flip-card-back">
                   <h2>JavaScript</h2>
@@ -199,7 +276,11 @@
             <div class="flip-card ">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <img src="../assets/skill/jquery.png" alt="Avatar" style="width:150px;height:150px;" />
+                  <img
+                    src="../assets/skill/jquery.png"
+                    alt="Avatar"
+                    style="width:150px;height:150px;"
+                  />
                 </div>
                 <div class="flip-card-back">
                   <h2>jQuery</h2>
@@ -232,7 +313,12 @@
             <div class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <img class="mt-5" src="../assets/skill/vue.png" alt="Avatar" style="width:130px;height:130px;" />
+                  <img
+                    class="mt-5"
+                    src="../assets/skill/vue.png"
+                    alt="Avatar"
+                    style="width:130px;height:130px;"
+                  />
                 </div>
                 <div class="flip-card-back">
                   <h2>Vue</h2>
@@ -248,7 +334,11 @@
             <div class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <img src="../assets/skill/nodejs.png" alt="Avatar" style="width:200px;height:200px;" />
+                  <img
+                    src="../assets/skill/nodejs.png"
+                    alt="Avatar"
+                    style="width:200px;height:200px;"
+                  />
                 </div>
                 <div class="flip-card-back">
                   <h2>Node.js</h2>
@@ -261,7 +351,11 @@
             <div class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <img src="../assets/skill/postman.png" alt="Avatar" style="width:150px;height:150px;" />
+                  <img
+                    src="../assets/skill/postman.png"
+                    alt="Avatar"
+                    style="width:150px;height:150px;"
+                  />
                 </div>
                 <div class="flip-card-back">
                   <h2>Postman</h2>
@@ -274,7 +368,12 @@
             <div class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <img class="mt-3" src="../assets/skill/webpack.png" alt="Avatar" style="width:130px;height:150px;" />
+                  <img
+                    class="mt-3"
+                    src="../assets/skill/webpack.png"
+                    alt="Avatar"
+                    style="width:130px;height:150px;"
+                  />
                 </div>
                 <div class="flip-card-back">
                   <h2>Webpack</h2>
@@ -287,7 +386,12 @@
             <div class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <img class="mt-3" src="../assets/skill/git.png" alt="Avatar" style="width:130px;height:130px;" />
+                  <img
+                    class="mt-3"
+                    src="../assets/skill/git.png"
+                    alt="Avatar"
+                    style="width:130px;height:130px;"
+                  />
                 </div>
                 <div class="flip-card-back">
                   <h2>Git</h2>
@@ -310,9 +414,14 @@
             <div class="transform_3d">
               <div class="myCard">
                 <div class="myCard_img">
-                  <a href="#" @click.prevent="openModal(works[0])"
-                    ><img class="img-fluid" src="../assets/works/as-1-m.png" alt="img"
-                  /></a>
+                  <a
+                    href="#"
+                    @click.prevent="openModal(works[0])"
+                  ><img
+                      class="img-fluid"
+                      src="../assets/works/as-1-m.png"
+                      alt="img"
+                    /></a>
                 </div>
               </div>
               <h3 class="text-center py-4">AS Monitor</h3>
@@ -322,9 +431,14 @@
             <div class="transform_3d">
               <div class="myCard">
                 <div class="myCard_img">
-                  <a href="#" @click.prevent="openModal(works[1])"
-                    ><img class="img-fluid" src="../assets/works/shoot-game-1.png" alt="img"
-                  /></a>
+                  <a
+                    href="#"
+                    @click.prevent="openModal(works[1])"
+                  ><img
+                      class="img-fluid"
+                      src="../assets/works/shoot-game-1.png"
+                      alt="img"
+                    /></a>
                 </div>
               </div>
               <h3 class="text-center py-4">Canvas Shoot Game</h3>
@@ -396,37 +510,76 @@
 
     <!-- 預先載入圖片 -->
     <div class="d-none">
-      <img v-for="(item, index) in works" :key="index" :src="item.imgUrl" alt="" />
+      <img
+        v-for="(item, index) in works"
+        :key="index"
+        :src="item.imgUrl"
+        alt=""
+      />
     </div>
 
     <!-- works Modal顯示詳細資料 -->
-    <div class="modal fade" id="worksModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
+    <div
+      class="modal fade"
+      id="worksModal"
+      tabindex="-1"
+      role="dialog"
+    >
+      <div
+        class="modal-dialog"
+        role="document"
+      >
         <div class="modal-content myCard_content">
           <div class="modal-header border-0">
-            <h5 class="modal-title" id="exampleModalLabel">
+            <h5
+              class="modal-title"
+              id="exampleModalLabel"
+            >
               {{ works_modal.title }}
             </h5>
-            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+            <button
+              type="button"
+              class="close text-white"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <img :src="works_modal.imgUrl" alt="img" class="img-fluid" />
+            <img
+              :src="works_modal.imgUrl"
+              alt="img"
+              class="img-fluid"
+            />
             <ul class="mt-3">
-              <li class="py-2" v-for="(content, index) in works_modal.content" :key="index">
+              <li
+                class="py-2"
+                v-for="(content, index) in works_modal.content"
+                :key="index"
+              >
                 {{ content }}
               </li>
             </ul>
           </div>
           <div class="">
-            <div v-if="works_modal.href == ''" class=" text-center m-3 pb-4">
+            <div
+              v-if="works_modal.href == ''"
+              class=" text-center m-3 pb-4"
+            >
               <button class="goToWeb-noDemo rounded-pill">
                 版權問題無法提供 Demo
               </button>
             </div>
-            <div v-else class=" text-center m-3 pb-4">
-              <a :href="works_modal.href" target="_blank" class="goToWeb rounded-pill">點擊前往作品網頁</a>
+            <div
+              v-else
+              class=" text-center m-3 pb-4"
+            >
+              <a
+                :href="works_modal.href"
+                target="_blank"
+                class="goToWeb rounded-pill"
+              >點擊前往作品網頁</a>
             </div>
           </div>
         </div>
@@ -481,7 +634,8 @@
             <div class="exContent text-white">
               <h4 class="pb-4">
                 Neithnet | 助理工程師 |
-                <span class="d-inline-block"><i class="fas fa-clock"></i> 2019 年 11 月 - 2021 年</span>
+                <span class="d-inline-block"><i class="fas fa-clock"></i> 2019 年 11 月 - 2021
+                  年</span>
               </h4>
               <p><i class="fas fa-tools pr-3"></i> Vue 專案開發</p>
               <ul>
@@ -532,7 +686,11 @@
         <div class="row d-flex justify-content-center py-4">
           <div class="col-md-3 justify-content-md-end d-none d-md-flex">
             <div class="position-relative exInner">
-              <img class="img-fluid exImg" src="../assets/experience/Graduation.png" alt="img" />
+              <img
+                class="img-fluid exImg"
+                src="../assets/experience/Graduation.png"
+                alt="img"
+              />
             </div>
           </div>
           <div class="col-md-8">
@@ -552,30 +710,43 @@
       <div class="container">
         <div class="row d-flex justify-content-center">
           <div class="col-md-6 text-center text-white">
-            <div class="contact_card" :class="{ active: contactShow }">
+            <div
+              class="contact_card"
+              :class="{ active: contactShow }"
+            >
               <h1 class="py-4">Contact Me</h1>
               <div class="row d-flex justify-content-center">
                 <div class="col-md-6">
                   <div class="px-3">
-                    <img class="img-fluid img-thumbnail" src="https://i.imgur.com/zqTebNt.jpg" alt="" />
+                    <img
+                      class="img-fluid img-thumbnail"
+                      src="https://i.imgur.com/zqTebNt.jpg"
+                      alt=""
+                    />
                   </div>
                 </div>
               </div>
               <h3 class="py-3">Steve</h3>
               <h5 class="pb-3">
-                <a href="mailto:ycsteven.tsao@gmail.com" class="text-white"
-                  ><i class="fas fa-envelope"></i> livepower0815@gmail.com</a
-                >
+                <a
+                  href="mailto:ycsteven.tsao@gmail.com"
+                  class="text-white"
+                ><i class="fas fa-envelope"></i> ycsteven.tsao@gmail.com</a>
               </h5>
               <h5 class="pb-3"><i class="fas fa-phone"></i> 0953-335-979</h5>
               <!-- <a href="https://www.facebook.com/profile.php?id=100000312843510" target="_blank"
                 ><i class="fab fa-facebook-square"></i
               ></a> -->
-              <a href="https://github.com/stevecyj" class="" target="_blank"><i class="fab fa-github"></i></a>
+              <a
+                href="https://github.com/stevecyj"
+                class=""
+                target="_blank"
+              ><i class="fab fa-github"></i></a>
               <!-- <a href="https://www.cakeresume.com/livepower0815" target="_blank"><i class="fas fa-copyright"></i></a> -->
-              <a href="https://www.linkedin.com/in/steve-tsao-67620811b/" target="_blank"
-                ><i class="fab fa-linkedin"></i
-              ></a>
+              <a
+                href="https://www.linkedin.com/in/steve-tsao-67620811b/"
+                target="_blank"
+              ><i class="fab fa-linkedin"></i></a>
             </div>
           </div>
         </div>
